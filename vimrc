@@ -67,10 +67,13 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if has("gui_running")
-  set guioptions-=m
-  set guioptions-=T
   set lines=40
   set columns=80
+  set guioptions=egt
+  set guifont=Inconsolata:h14
+
+  " MacVim only
+  set transparency=8
 endif
 
 au BufNewFile,BufRead *.ltx                      set wm=4
